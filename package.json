@@ -8,7 +8,6 @@
     "url": "git@github.com:vinnymac/backbone-marionette-gulp-starter.git"
   },
   "browser": {
-    "underscore": "backbone/node_modules/underscore",
     "plugin": "./vendor/scripts/jquery-plugin.js",
     "config": "./config/index.coffee"
   },
