@@ -1,6 +1,9 @@
-* Commands
-gulp test - to run tests
-gulp - to execute default build
-gulp staging
-gulp production
-gulp development
+* [Commands](#commands)
+
+<a name="commands"/>
+## Commands
+  * gulp - defaults to development
+  * gulp test
+  * gulp development
+  * gulp staging
+  * gulp production
