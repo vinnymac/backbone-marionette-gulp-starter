@@ -1,0 +1,6 @@
+%h1= @title
+%p= @description
+%ul
+  - for tool in @tools
+    %li= tool
+%img{ src: "/images/gulp.png", alt: "" }
