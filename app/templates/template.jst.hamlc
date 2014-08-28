@@ -2,5 +2,5 @@
 %p= @description
 %ul
   - for tool in @tools
-    %li= tool
-%img{ src: "/images/gulp.png", alt: "" }
+    %li= tool + " and a bunch of bananas"
+%img{ src: "./images/gulp.png", alt: "" }
