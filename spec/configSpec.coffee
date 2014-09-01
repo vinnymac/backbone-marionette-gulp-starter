@@ -1,5 +1,5 @@
 Backbone = require 'backbone'
-config   = require '../config'
+config   = require '../app/scripts/config'
 
 describe "Configuration", ->
   it "should be a testing environment", ->

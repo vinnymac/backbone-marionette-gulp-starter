@@ -13,7 +13,7 @@ class SampleView extends Backbone.Marionette.View
     underscoreTest = _.last [0,1,2, 'hi mom!']
 
   render: ->
-    configuration = new Backbone.Model require 'config'
+    configuration = new Backbone.Model require './config'
     @$el.html @template
       title: 'Gulp All The Things!'
       description: 'Starter Gulp + Browserify project equipped to handle the following:'

@@ -20,8 +20,11 @@ gulpif        = require "gulp-if"
 revall        = require 'gulp-rev-all'
 
 gulp.task "browserify", ->
+  isProduction = global.environment is "production"
+
   bundleMethod = if global.isWatching then watchify else browserify
   bundler = bundleMethod
+    debug: not isProduction
     # Specify the entry point of your app
     entries: ["./app/scripts/app.coffee"]
     # Add file extentions to make optional in your requires
@@ -38,7 +41,7 @@ gulp.task "browserify", ->
     bundleLogger.start()
     bundler
       # Enable source maps!
-      .bundle(debug: not isProduction)
+      .bundle()
       # Report compile errors
       .on "error", handleErrors
       # Log when bundling completes!

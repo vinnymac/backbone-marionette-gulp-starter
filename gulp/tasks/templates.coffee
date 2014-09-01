@@ -4,11 +4,13 @@ gulp        = require 'gulp'
 gulpif      = require "gulp-if"
 revall      = require 'gulp-rev-all'
 streamify   = require "gulp-streamify"
-config      = require "../../config"
+
 
 gulp.task 'templates', ->
   dest = './build'
   isProduction = global.environment is 'production'
+
+  config = require "../../app/scripts/config"
 
   return gulp.src('./assets/templates/index.haml')
     .pipe(changed(dest))
