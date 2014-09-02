@@ -24,7 +24,7 @@ Next install the required node modules.
 
     npm install
 
-Run the default task by running
+Run the default task.
 
     gulp
 
