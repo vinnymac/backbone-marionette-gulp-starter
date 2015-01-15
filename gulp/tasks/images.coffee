@@ -6,10 +6,10 @@ revall     = require 'gulp-rev-all'
 streamify  = require "gulp-streamify"
 
 gulp.task 'images', ->
-  dest = './build/images'
+  dest = './build/images/'
   isProduction = global.environment is 'production'
 
-  return gulp.src('./assets/images/**')
+  return gulp.src('assets/images/**/*')
     .pipe(changed(dest)) # Ignore unchanged files
     .pipe(imagemin()) # Optimize
     .pipe(gulpif(isProduction, streamify(revall())))
